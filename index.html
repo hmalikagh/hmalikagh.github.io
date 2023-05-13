@@ -1,3 +1,6 @@
+<!--EXCEL SHEET
+https://docs.google.com/spreadsheets/d/1feQUwq85pHBDLiRZIYULiq6uvHOPDcHVaEvvG6zDqvw/edit#gid=0
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
                     <ul id="sidemenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <!--<li><a href="#services">Services</a></li>-->
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -40,7 +43,10 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Information about me</p>
+                    <p>Hi, my name is Hubert, I'm 23 years old and I'm from Kraow Poland. I'm currently studying Electronics and Telecomunication at AGH University of Science and Technology. For some time now 
+                        I`ve been interested in Web Designing so here I am making this Portfolio. Also my main interests are gaming, programming (lately in C++, and Unity) and 3D modeling in Blender.
+                        Currenly I'm trying to find some part time job/internship, in the field of Electronics or Programming. 
+                    </p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -62,7 +68,7 @@
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>07.2021-09.2021 And 07.2022-09.2022</span><br>Fashion Trends Group / Warehouseman<br>Skawina</li>
-                            <li><span>07.2019 - 08. 2019 </span><br>KRK Systemy Kablow / Apprentice<br>Liszki</li>
+                            <li><span>07.2019 - 08. 2019 </span><br>KRK Systemy Kablowe / Apprentice<br>Liszki</li>
                             
                         </ul>
                     </div>
@@ -81,7 +87,7 @@
         </div>
     </div>
 <!------------------------Services------------------------------------------->
-    <div id="services">
+<!--    <div id="services">
         <div class="container">
             <h1 class="sub-title service-header" >My Services</h1>
             <div class="services-list">
@@ -106,7 +112,7 @@
             </div>
         </div>
     </div>
-
+--> 
 <!-------------------Portfolio------------------------------------->
 
     <div id="portfolio">
@@ -117,7 +123,7 @@
                     <img src="images/Dragon.jpg" alt="Photo of Work 1">
                     <div class="layer">
                         <h3>Dungeon Game</h3>
-                        <p>Simple C++game, where you move a player and colect rewards while doding enemies. </p>
+                        <p>Simple C++ game, where you move a player and colect rewards while doding enemies. </p>
                         <a href="https://github.com/hmalikagh/DungeonGame---repo" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
@@ -157,12 +163,13 @@
                     <a href="images/CV - Hubert Malik.pdf" download class="btn btn2">Downlload CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="Msg"></span>
                 </div>
             </div>
         </div>
@@ -208,6 +215,25 @@
             
         }
 
+    </script>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxu5-1ezxyYXhAH8me5Jt-PY3vdMFC4Wiui3PtOJXp_aU8GrZWXf3f8VxOB0ZjYmVY5lQ/exec'
+     const form = document.forms['submit-to-google-sheet']
+     const msg = document.getElementById("Msg")
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+     })
     </script>
 </body>
 </html>
