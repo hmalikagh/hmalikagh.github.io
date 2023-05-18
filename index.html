@@ -1,239 +1,338 @@
-<!--EXCEL SHEET
-https://docs.google.com/spreadsheets/d/1feQUwq85pHBDLiRZIYULiq6uvHOPDcHVaEvvG6zDqvw/edit#gid=0
--->
 <!DOCTYPE html>
+
+<!--SHEET WITH ALL THE DATA COLECTED
+    https://docs.google.com/spreadsheets/d/1r5kUOv2kVaxmfRVFl07kW3VN7Tped5yScVBvnZmy-kc/edit#gid=0
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta - ___</title>
+
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio | Hubert</title>
-    <script src="https://kit.fontawesome.com/cb012eb15d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            
-                <nav class="header">
-                    <img src="images/logo.png" class="logo" alt="MY LOGO">
-                    <ul id="sidemenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <!--<li><a href="#services">Services</a></li>-->
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" id="barmenu" onclick="openmenu()"></i>
-                </nav>
-          
-            <div class="header-text">
-                <p>Programmer/Electronic</p>
-                <h1>Hi, Im <span>Hubert</span><br> Malik from Poland</h1>
-            </div>
+    <div class="background">
+        <div class="header">
+            <h1>Ankieta</h1>
         </div>
-    </div> 
-<!----------------------About-------------------------------->
-    <div id="about">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/Background.jpg" alt="My Photo">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hi, my name is Hubert, I'm 23 years old and I'm from Kraow Poland. I'm currently studying Electronics and Telecomunication at AGH University of Science and Technology. For some time now 
-                        I`ve been interested in Web Designing so here I am making this Portfolio. Also my main interests are gaming, programming (lately in C++, and Unity) and 3D modeling in Blender.
-                        Currenly I'm trying to find some part time job/internship, in the field of Electronics or Programming. 
-                    </p>
+            <form name="submit-to-google-sheet" class="questions">
+                <label for="1">1. Wiek ….</label><br>
+                <input type="text" name="1" id="answer"><br>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Programming</span><br>C++20, Python, C</li>
-                            <li><span>Web Design</span><br>HTML, CSS , JAVASCRIPT</li>
-                            <li><span>Knowledge of Programs</span><br> Visual Studio, Visual Studio Code, PyCharm,
-                                Matlab, PSPICE, Cadance, KEIL μVISION, LabView, Cisco Packet
-                                Tracer, PuTTY, GitHub</li>
-                            <li><Span>Knowledge of Operationg systems</Span><br>Windows, Linux</li>
-                            <li><span>Languages</span><br>Polish - native <br>English - intermediate</li>
-                            <li><Span>Driving License</Span><br>Kategory B</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>07.2021-09.2021 And 07.2022-09.2022</span><br>Fashion Trends Group / Warehouseman<br>Skawina</li>
-                            <li><span>07.2019 - 08. 2019 </span><br>KRK Systemy Kablowe / Apprentice<br>Liszki</li>
-                            
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>10.2020 - PRESENT</span><br>AGH University of Science and Technology, Krakow<br><br> Filed of study: Electronics and Telecomunications <br>
-                                Type of studies: Full-time studies</li>
-                            <li><span>09.2016 - 04.2020</span><br>Technical school - Technikum Energetyczno Elektroniczne im.
-                                Tadeusza Kosciuszki nr 9 w Krakowie, Krakow <br> <br>Filed of study: Electronics <br>
-                                Acquired title: Electronics Technician</li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <label for="2">2. Czy masz oboje rodziców?</label><br>
+                <select name="2" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="3">3. Jaka atmosfera panuje w twoim domu?</label><br>
+                <select name="3" id="options">
+                    <option value="Napięta">Napięta</option>
+                    <option value="Hałaśliwa">Hałaśliwa</option>
+                    <option value="Depresyjna">Depresyjna</option>
+                    <option value="Nadmiar emocji i problemów">Nadmiar emocji i problemów</option>
+                    <option value="Obojętna">Obojętna</option>
+                    <option value="Ciepła">Ciepła</option>
+                    <option value="Radosna">Radosna</option>
+                    <option value="Czujemy się kochani">Czujemy się kochani</option>
+                </select><br>
+
+                <label for="4">4. W domu czuje się:</label><br>
+                <select name="4" id="options">
+                    <option value="Niepotrzebny">Niepotrzebny</option>
+                    <option value="samotny">Samotny</option>
+                    <option value="Zagubiony">Zagubiony</option>
+                    <option value="Kochany">Kochany</option>
+                </select><br>
+
+                <label for="5">5. Czy twoi rodzice akceptują twoje wybory?</label><br>
+                <select name="5" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="6">6. Czy twoi rodzice dają ci swobodę</label><br>
+                <select name="6" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="7">7. Czy czujesz odtrącony bądź dystans ze strony swoich rodziców?</label><br>
+                <select name="7" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="8">8. Czy masz wrażenie że twoi rodzice są zmęczeni opieką nad tobą?</label><br>
+                <select name="8" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="9">9. Czy czujesz ze jesteś dla rodziców ciężarem?</label><br>
+                <select name="9" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="10">10. Czy czujesz ze rodzice są tobą rozczarowani?</label><br>
+                <select name="10" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="11">11. Czy twoich rodziców interesują twoje potrzeby?</label><br>
+                <select name="11" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="12">12. Czy rodzice narzucają ci jaki/jaka masz być?</label><br>
+                <select name="12" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="13">13. Czy czujesz się oceniany za wszystko przez rodziców?</label><br>
+                <select name="13" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="14">14. Czy czujesz że rodzice za dużo od ciebie wymagają? </label><br>
+                <select name="14" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="15">15. Czy rodzice nakładają na ciebie zbyt dużą ilość obowiązków? </label><br>
+                <select name="15" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="16">16. Czy czujesz presję ze strony rodziców?</label><br>
+                <select name="16" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="17">17. Czy rodzice wymagają od ciebie żebyś był „idealny/idealna”? </label><br>
+                <select name="17" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="18">18. Czy masz wrażenie ze twoich rodziców interesują tylko twoje wyniki w nauce?</label><br>
+                <select name="18" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="19">19. Czy twoi rodzice pozwalają ci na bycie samodzielnym?</label><br>
+                <select name="19" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="20">20. Czy czujesz obojętność ze strony swoich rodziców?</label><br>
+                <select name="20" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="21">21. Czy czujesz że rodzice unikają rozmów z tobą? </label><br>
+                <select name="21" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="22">22. Czy twoi rodzice są zaangażowani w twoje sprawy?<br> (Chodzi o zaangażowanie a nie wtrącanie się, np. pytają co u ciebie, jak w szkole, jak praktyki itp.)</label><br>
+                <select name="22" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="23">23. Czy czujesz ze twoi rodzice są za bardzo nadopiekuńczy?</label><br>
+                <select name="23" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="24">24. Czy twoi rodzice wyręczają cię w czym tylko mogą (np. sprzątają twój pokój za ciebie) </label><br>
+                <select name="24" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="25">25. Czy rodzice ustępują ci na każdym kroku?</label><br>
+                <select name="25" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="26">26. Czy czujesz że rodzice nadmiernie przejmują się twoim stanem zdrowia?</label><br>
+                <select name="26" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="27">27. Czy rodzice tolerują twoje złe postępowanie?</label><br>
+                <select name="27" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="28">28. Czy masz oparcie ze strony swoich rodziców? </label><br>
+                <select name="28" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="29">29. Czy czujesz ze twoi rodzice cię rozumieją?</label><br>
+                <select name="29" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="30">30. Czy twoi rodzice szanują twoją pytawność ?</label><br>
+                <select name="30" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="31">31. Czy rodzice rozmawiają z toba o twoich planach na przyszłość?</label><br>
+                <select name="31" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="32">32. Czy masz wrażenie, że Twoi rodzice zawsze stoją po Twojej stronie, nawet jeśli się z Tobą nie zgadzają?</label><br>
+                <select name="32" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+
+                <label for="33">33. Czy wykonujesz jakieś aktywności ze swoimi rodzicami?Jeżeli tak jakie</label><br>
+                <select name="33" id="options">
+                    <option value="Nie">Nie</option>
+                    <option value="Tak">Tak</option>
+                </select><br>
+                <input type="text" name="33+" id=""><br>
+
+                <label for="34">34. Jak często masz okazje porozmawiać ze swoimi rodzicami o swoim życiu? Rozmawiamy: </label><br>
+                <select name="34" id="options">
+                    <option value="Codziennie">Codziennie</option>
+                    <option value="Często">Często</option>
+                    <option value="Czasami">Czasami</option>
+                    <option value="Jak zapytają to odpowiem i tyle">Jak zapytają to odpowiem i tyle</option>
+                    <option value="Rzadko">Rzadko</option>
+                    <option value="Prawie nigdy">Prawie nigdy</option>
+                </select><br>
+
+                <label for="35">35. Czy czujesz że możesz zawsze przyjść powiedzieć rodzicom o swoich problemach? </label><br>
+                <select name="35" id="options">
+                    <option value="Tak, zawsze mogę przyjść powiedzieć">Tak, zawsze mogę przyjść powiedzieć </option>
+                    <option value="Raczej zawsze">Raczej zawsze</option>
+                    <option value="Czasami, zależy od problemu">Czasami, zależy od problemu</option>
+                    <option value="Mogę ale nie chodzę z problemami do rodziców">Mogę ale nie chodzę z problemami do rodziców</option>
+                    <option value="Rodzice nie chcą słyszeć o moich problemach, mają swoje">Rodzice nie chcą słyszeć o moich problemach, mają swoje</option>
+                    <option value="Rodzice po prostu nie interesują się moimi problemami">Rodzice po prostu nie interesują się moimi problemami</option>
+                    <option value="Inne">Inne</option>
+                </select><br>
+                <label for="35+">Inne </label>
+                <input type="text" name="35+" id="answer"><br>
+
+                <label for="36">36. Czy czujesz ze twoi rodzice są dostępni gdy ich potrzebujesz?  </label><br>
+                <select name="36" id="options">
+                    <option value="Zawsze są dla mnie dostępni gdy tylko potrzebuję">Zawsze są dla mnie dostępni gdy tylko potrzebuję </option>
+                    <option value="Zazwyczaj">Zazwyczaj</option>
+                    <option value="Raczej rzadko">Raczej rzadko</option>
+                    <option value="Nigdy ich nie ma kiedy potrzebuje">Nigdy ich nie ma kiedy potrzebuje</option>
+                    <option value="Są dostępni ale nie zwracam się do nich wole radzić sobie sam/sama">Są dostępni ale nie zwracam się do nich wole radzić sobie sam/sama</option>
+                </select><br>
+
+                <label for="37">37. Jak twoja relacja z rodzicami wpływa na Twoje samopoczucie?   </label><br>
+                <select name="37" id="options">
+                    <option value="Mam dobre relacje z rodzicami dlatego czuje się przy nich dobrze">Mam dobre relacje z rodzicami dlatego czuje się przy nich dobrze </option>
+                    <option value="Mam średnie relacje z rodzicami dlatego moje samopoczucie względem ich jest neutralne">Mam średnie relacje z rodzicami dlatego moje samopoczucie względem ich jest neutralne</option>
+                    <option value="Mam słabe relacje z rodzicami i jest mi z tego powodu przykro">Mam słabe relacje z rodzicami i jest mi z tego powodu przykro</option>
+                    <option value="Mam złe relacje z rodzicami ale nie przejmuje się">Mam złe relacje z rodzicami ale nie przejmuje się </option>
+                    <option value="Inne">Inne</option>
+                </select><br>
+                <label for="37+">Inne </label>
+                <input type="text" name="37+" id="answer"><br>
+
+                <label for="38">38. Czy czujesz ze twój głos jest słyszany i szanowany w twojej rodzinie? </label><br>
+                <select name="38" id="options">
+                    <option value="Tak, rodzice zawsze zwracają uwagę na moja opinie">Tak, rodzice zawsze zwracają uwagę na moja opinie </option>
+                    <option value="Tak, ale nie zawsze">Tak, ale nie zawsze</option>
+                    <option value="Moja opinia zazwyczaj nie jest brana pod uwagę">Moja opinia zazwyczaj nie jest brana pod uwagę</option>
+                    <option value="Nie, moi rodzice nie liczą się z moją opinią ">Nie, moi rodzice nie liczą się z moją opinią </option>
+                </select><br>
+
+                <label for="39">39. Czy masz poczucie, że Twoi rodzice są dla Ciebie wsparciem emocjonalnym?</label><br>
+                <select name="39" id="options">
+                    <option value="Rodzice dają mi dużo wsparcia">Rodzice dają mi dużo wsparcia</option>
+                    <option value="Rodzice średnio mnie wspierają">Rodzice średnio mnie wspierają </option>
+                    <option value="Rodzice nie wspierają mnie">Rodzice nie wspierają mnie</option>
+                </select><br>
+
+                <label for="40">40. Czy czujesz, że masz wystarczającą swobodę w wyrażaniu siebie i swojej tożsamości wobec rodziców?</label><br>
+                <select name="40" id="options">
+                    <option value="TAK, rodzice akceptują mnie taką/takim jaka/jaki jestem">TAK, rodzice akceptują mnie taką/takim jaka/jaki jestem</option>
+                    <option value="NIE, rodzice mnie nie akceptują">NIE, rodzice mnie nie akceptują</option>
+                    <option value="Nie interesuje ich to">Nie interesuje ich to</option>
+                </select><br>
+
+                <label for="41">41. Czy lubisz przebywać ze swoimi rodzicami ?</label><br>
+                <select name="41" id="options">
+                    <option value="Tak, bardzo lubię spędzać czas ze swoimi rodzicami">Tak, bardzo lubię spędzać czas ze swoimi rodzicami</option>
+                    <option value="Nie przepadam za spędzaniem czasu z rodzicami, robię to tylko kiedy musze">Nie przepadam za spędzaniem czasu z rodzicami, robię to tylko kiedy musze</option>
+                    <option value="Nie spędzam z nimi czasu">Nie spędzam z nimi czasu</option>
+
+                </select><br>
+
+                <label for="42">42. Czy twoi rodzice mają dla ciebie czas?</label><br>
+                <select name="42" id="options">
+                    <option value="Tak, rodzice zawsze mają dla mnie czas">Tak, rodzice zawsze mają dla mnie czas</option>
+                    <option value="Zwykle mają dla mnie czas, ale nie zawsze ">Zwykle mają dla mnie czas, ale nie zawsze </option>
+                    <option value="Starają się ale są za bardzo zapracowani">Starają się ale są za bardzo zapracowani</option>
+                    <option value="Nie rodzice nie maja dla mnie czasu">Nie rodzice nie maja dla mnie czasu </option>
+                </select><br>
+
+                <label for="43">43. Czy masz jakieś trudności w relacji z rodzicami? Jeśli tak jakie? (np. nie mogę się z nimi dogadać) </label><br>
+                <input type="text" name="43" id="answer"><br>
+
+                <label for="44">44. Jak opiszesz swoją relacje z rodzicami? (np. ja mam swoje zycie oni swoje…)</label><br>
+                <input type="text" name="44" id="answer"><br>
+                
+                <br>
+                <button type="submit" id="btn">Submit</button>
+            </form>
         </div>
     </div>
-<!------------------------Services------------------------------------------->
-<!--    <div id="services">
-        <div class="container">
-            <h1 class="sub-title service-header" >My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>I can help u make website like this.</p>
-                    <a href="#contact">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>Game Design</h2>
-                    <p>I can help u make basic game in C++.</p>
-                    <a href="#contact">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-cube"></i>
-                    <h2>Blender Design</h2>
-                    <p>I can make some cool 3D art using blender.</p>
-                    <a href="#contact">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
---> 
-<!-------------------Portfolio------------------------------------->
-
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/Dragon.jpg" alt="Photo of Work 1">
-                    <div class="layer">
-                        <h3>Dungeon Game</h3>
-                        <p>Simple C++ game, where you move a player and colect rewards while doding enemies. </p>
-                        <a href="https://github.com/hmalikagh/DungeonGame---repo" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/Website.jpg" alt="Photo of Work 2">
-                    <div class="layer">
-                        <h3>Portfolio Website</h3>
-                        <p> This is exactly my project, my first ever Portfolio made using HTML and CSS.</p>
-                        <a href="https://github.com/hmalikagh/hmalikagh.github.io" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/Room.png" alt="Photo of Work 2">
-                    <div class="layer">
-                        <h3>Blender Models</h3>
-                        <p> Simple moedels created in Blender.</p>
-                        <a href="https://github.com/hmalikagh/Blender" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/hmalikagh" target="_blank" class="btn">See more</a>
-        </div>
-    </div>
-<!----------------------------Contact------------------------------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me </h1>
-                    <p><i class="fa-solid fa-envelope"></i> hubert.malik00@interia.pl</p>
-                    <p><i class="fa-solid fa-phone"></i> 534 591 499</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/hubert.malik.779" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/hubi_17/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/hmalikagh/" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <a href="images/CV - Hubert Malik.pdf" download class="btn btn2">Downlload CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="Msg"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>Copyright © Hubert. Made with help of Easy Tutorials <a href="https://www.youtube.com/@EasyTutorialsVideo" target="_blank"><i class="fa-solid fa-link"></i></a></p>
-        </div>
-    </div>
-
-
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        
-        var sidemenu = document.getElementById("sidemenu");
-        var barmenu = document.getElementById("barmenu");
-        
-
-        function openmenu(){
-            sidemenu.style.display = "block"
-            barmenu.style.display = "none"
-
-        }
-
-        function closemenu(){
-            sidemenu.style.display = "none"
-            barmenu.style.display = "block"
-            
-        }
-
-    </script>
-
-    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxu5-1ezxyYXhAH8me5Jt-PY3vdMFC4Wiui3PtOJXp_aU8GrZWXf3f8VxOB0ZjYmVY5lQ/exec'
-     const form = document.forms['submit-to-google-sheet']
-     const msg = document.getElementById("Msg")
-
-    form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-     })
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQ03umOfJ0Ve-FrO1Uxc4iOhsLe2XzUXP7ebrnupZhEvnslVrx24M9TtAK_6mNFZ8U/exec'
+         const form = document.forms['submit-to-google-sheet']
+         const msg = document.getElementById("Msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+         })
     </script>
 </body>
 </html>
