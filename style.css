@@ -117,7 +117,7 @@ p {
 /*--------------------------------------------*/
 
 #Pyt0 {
-  display: none;
+  display: inline;
 }
 
 #Pyt1 {
@@ -164,7 +164,7 @@ p {
 }
 
 #Pyt11 {
-  display: inline;
+  display: none;
 }
 
 #Pyt12 {
