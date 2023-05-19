@@ -1,56 +1,208 @@
-*{
-    margin: 0;
-    padding: 0;
-
-    font-family: Arial;
-   
-   
-    
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  /*border: black solid 1px;*/
 }
 
-html{
-    scroll-behavior: smooth;
-    
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: white;
-    color: #251c0b; 
+body {
+  background-color: white;
+  color: #251c0b;
 }
 
-.header{
-    display: flex;
-    background-color: #ff004f;
-    color: white;
-    padding: 20px;
-    justify-content: center; 
-    margin-bottom: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    
+.header {
+  display: block;
+  background-color: #ff004f;
+  color: white;
+  padding: 20px;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.container{
-    text-align: center;
-    color: #ff004f;
-    margin: auto;
-    width: 100%;
-    font-weight: 100;
-    
+.fill {
+  display: block;
+  background-color: #ff004f;
+  color: white;
+  padding: 20px;
+  justify-content: center;
+
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-#options{
-    margin: 15px;
+.oneOption {
+  font-size: large;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
-#answer{
-    margin: 10px;
+input {
+  margin: 8px;
+  cursor: pointer;
 }
 
-  
-button{
-    margin: 20px;
+h3 {
+  margin: 5px;
 }
 
+p {
+  margin-top: 10px;
+}
 
+.container {
+  text-align: center;
+  color: #ff004f;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  font-weight: 100;
+}
+/*--------------Button------------------------------*/
+.btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #ff004f;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 
+  margin: 15px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ff004f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+/*--------------------------------------------*/
+
+#Pyt0 {
+  display: none;
+}
+
+#Pyt1 {
+  display: none;
+}
+
+#Pyt2 {
+  display: none;
+}
+
+#Pyt3 {
+  display: none;
+}
+
+#Pyt4 {
+  display: none;
+  top: 65%;
+}
+
+#Pyt5 {
+  display: none;
+}
+
+#Pyt6 {
+  display: none;
+}
+
+#Pyt7 {
+  display: none;
+}
+
+#Pyt8 {
+  display: none;
+}
+
+#Pyt9 {
+  display: none;
+  top: 50%;
+}
+
+#Pyt10 {
+  display: none;
+  top: 55%;
+}
+
+#Pyt11 {
+  display: inline;
+}
+
+#Pyt12 {
+  display: none;
+}
+
+#Pyt13 {
+  display: none;
+}
+
+#Pyt14 {
+  display: none;
+}
+
+#Pyt15 {
+  display: none;
+}
+
+#Pyt16 {
+  display: none;
+}
+
+#Pyt17 {
+  display: none;
+}
+
+#Pyt18 {
+  display: none;
+}
+
+#Pyt19 {
+  display: none;
+}
+
+#Pyt20 {
+  display: none;
+}
+
+#Pyt21 {
+  display: none;
+}

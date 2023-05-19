@@ -4,335 +4,372 @@
     https://docs.google.com/spreadsheets/d/1r5kUOv2kVaxmfRVFl07kW3VN7Tped5yScVBvnZmy-kc/edit#gid=0
 -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ankieta - ___</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Ankieta</h1>
+        <p>
+          Jest to ankieta badająca relacje z rodzicami. Bardzo proszę o dokładne
+          czytanie pytań oraz udzielenie szczerych odpowiedzi na każde pytanie
+          poprzez zaznaczenie odpowiedzi bądź wpisanie własnej. Ankieta jest
+          ANONIMOWA, uzyskane informacje zostaną wykorzystane tylko i wyłącznie
+          do celów naukowych (praca licencjacka). Dziękuję :)
+        </p>
+      </div>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="background">
-        <div class="header">
-            <h1>Ankieta</h1>
+      <form name="submit-to-google-sheet">
+        <div class="oneOption" id="Pyt0">
+          <h3 class="fill">Ile masz lat?</h3>
+          <input type="radio" name="Wiek" value="15" />
+          <label class="radioContainer" for="Wiek">15</label><br />
+          <input type="radio" name="Wiek" value="16" />
+          <label class="radioContainer" for="Wiek">16</label><br />
+          <input type="radio" name="Wiek" value="17" />
+          <label class="radioContainer" for="Wiek">17</label><br />
+          <input type="radio" name="Wiek" value="18" />
+          <label class="radioContainer" for="Wiek">18</label><br />
+          <input type="radio" name="Wiek" value="19" />
+          <label class="radioContainer" for="Wiek">19</label>
+          <br />
+          <span class="btn" onclick="next()">Następne</span>
         </div>
-        <div class="container">
-            <form name="submit-to-google-sheet" class="questions">
-                <label for="1">1. Wiek ….</label><br>
-                <input type="text" name="1" id="answer"><br>
 
-                <label for="2">2. Czy masz oboje rodziców?</label><br>
-                <select name="2" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
+        <div class="oneOption" id="Pyt1">
+          <h3>Pytanie 1</h3>
+          <p class="fill">Czy masz oboje rodziców?</p>
+          <input type="radio" name="1" value="Tak" />
+          <label class="radioContainer" for="1">Tak</label><br />
+          <input type="radio" name="1" value="Nie" />
+          <label class="radioContainer" for="1">Nie</label><br />
 
-                <label for="3">3. Jaka atmosfera panuje w twoim domu?</label><br>
-                <select name="3" id="options">
-                    <option value="Napięta">Napięta</option>
-                    <option value="Hałaśliwa">Hałaśliwa</option>
-                    <option value="Depresyjna">Depresyjna</option>
-                    <option value="Nadmiar emocji i problemów">Nadmiar emocji i problemów</option>
-                    <option value="Obojętna">Obojętna</option>
-                    <option value="Ciepła">Ciepła</option>
-                    <option value="Radosna">Radosna</option>
-                    <option value="Czujemy się kochani">Czujemy się kochani</option>
-                </select><br>
-
-                <label for="4">4. W domu czuje się:</label><br>
-                <select name="4" id="options">
-                    <option value="Niepotrzebny">Niepotrzebny</option>
-                    <option value="samotny">Samotny</option>
-                    <option value="Zagubiony">Zagubiony</option>
-                    <option value="Kochany">Kochany</option>
-                </select><br>
-
-                <label for="5">5. Czy twoi rodzice akceptują twoje wybory?</label><br>
-                <select name="5" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="6">6. Czy twoi rodzice dają ci swobodę</label><br>
-                <select name="6" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="7">7. Czy czujesz odtrącony bądź dystans ze strony swoich rodziców?</label><br>
-                <select name="7" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="8">8. Czy masz wrażenie że twoi rodzice są zmęczeni opieką nad tobą?</label><br>
-                <select name="8" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="9">9. Czy czujesz ze jesteś dla rodziców ciężarem?</label><br>
-                <select name="9" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="10">10. Czy czujesz ze rodzice są tobą rozczarowani?</label><br>
-                <select name="10" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="11">11. Czy twoich rodziców interesują twoje potrzeby?</label><br>
-                <select name="11" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="12">12. Czy rodzice narzucają ci jaki/jaka masz być?</label><br>
-                <select name="12" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="13">13. Czy czujesz się oceniany za wszystko przez rodziców?</label><br>
-                <select name="13" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="14">14. Czy czujesz że rodzice za dużo od ciebie wymagają? </label><br>
-                <select name="14" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="15">15. Czy rodzice nakładają na ciebie zbyt dużą ilość obowiązków? </label><br>
-                <select name="15" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="16">16. Czy czujesz presję ze strony rodziców?</label><br>
-                <select name="16" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="17">17. Czy rodzice wymagają od ciebie żebyś był „idealny/idealna”? </label><br>
-                <select name="17" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="18">18. Czy masz wrażenie ze twoich rodziców interesują tylko twoje wyniki w nauce?</label><br>
-                <select name="18" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="19">19. Czy twoi rodzice pozwalają ci na bycie samodzielnym?</label><br>
-                <select name="19" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="20">20. Czy czujesz obojętność ze strony swoich rodziców?</label><br>
-                <select name="20" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="21">21. Czy czujesz że rodzice unikają rozmów z tobą? </label><br>
-                <select name="21" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="22">22. Czy twoi rodzice są zaangażowani w twoje sprawy?<br> (Chodzi o zaangażowanie a nie wtrącanie się, np. pytają co u ciebie, jak w szkole, jak praktyki itp.)</label><br>
-                <select name="22" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="23">23. Czy czujesz ze twoi rodzice są za bardzo nadopiekuńczy?</label><br>
-                <select name="23" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="24">24. Czy twoi rodzice wyręczają cię w czym tylko mogą (np. sprzątają twój pokój za ciebie) </label><br>
-                <select name="24" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="25">25. Czy rodzice ustępują ci na każdym kroku?</label><br>
-                <select name="25" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="26">26. Czy czujesz że rodzice nadmiernie przejmują się twoim stanem zdrowia?</label><br>
-                <select name="26" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="27">27. Czy rodzice tolerują twoje złe postępowanie?</label><br>
-                <select name="27" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="28">28. Czy masz oparcie ze strony swoich rodziców? </label><br>
-                <select name="28" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="29">29. Czy czujesz ze twoi rodzice cię rozumieją?</label><br>
-                <select name="29" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="30">30. Czy twoi rodzice szanują twoją pytawność ?</label><br>
-                <select name="30" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="31">31. Czy rodzice rozmawiają z toba o twoich planach na przyszłość?</label><br>
-                <select name="31" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="32">32. Czy masz wrażenie, że Twoi rodzice zawsze stoją po Twojej stronie, nawet jeśli się z Tobą nie zgadzają?</label><br>
-                <select name="32" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-
-                <label for="33">33. Czy wykonujesz jakieś aktywności ze swoimi rodzicami?Jeżeli tak jakie</label><br>
-                <select name="33" id="options">
-                    <option value="Nie">Nie</option>
-                    <option value="Tak">Tak</option>
-                </select><br>
-                <input type="text" name="33+" id=""><br>
-
-                <label for="34">34. Jak często masz okazje porozmawiać ze swoimi rodzicami o swoim życiu? Rozmawiamy: </label><br>
-                <select name="34" id="options">
-                    <option value="Codziennie">Codziennie</option>
-                    <option value="Często">Często</option>
-                    <option value="Czasami">Czasami</option>
-                    <option value="Jak zapytają to odpowiem i tyle">Jak zapytają to odpowiem i tyle</option>
-                    <option value="Rzadko">Rzadko</option>
-                    <option value="Prawie nigdy">Prawie nigdy</option>
-                </select><br>
-
-                <label for="35">35. Czy czujesz że możesz zawsze przyjść powiedzieć rodzicom o swoich problemach? </label><br>
-                <select name="35" id="options">
-                    <option value="Tak, zawsze mogę przyjść powiedzieć">Tak, zawsze mogę przyjść powiedzieć </option>
-                    <option value="Raczej zawsze">Raczej zawsze</option>
-                    <option value="Czasami, zależy od problemu">Czasami, zależy od problemu</option>
-                    <option value="Mogę ale nie chodzę z problemami do rodziców">Mogę ale nie chodzę z problemami do rodziców</option>
-                    <option value="Rodzice nie chcą słyszeć o moich problemach, mają swoje">Rodzice nie chcą słyszeć o moich problemach, mają swoje</option>
-                    <option value="Rodzice po prostu nie interesują się moimi problemami">Rodzice po prostu nie interesują się moimi problemami</option>
-                    <option value="Inne">Inne</option>
-                </select><br>
-                <label for="35+">Inne </label>
-                <input type="text" name="35+" id="answer"><br>
-
-                <label for="36">36. Czy czujesz ze twoi rodzice są dostępni gdy ich potrzebujesz?  </label><br>
-                <select name="36" id="options">
-                    <option value="Zawsze są dla mnie dostępni gdy tylko potrzebuję">Zawsze są dla mnie dostępni gdy tylko potrzebuję </option>
-                    <option value="Zazwyczaj">Zazwyczaj</option>
-                    <option value="Raczej rzadko">Raczej rzadko</option>
-                    <option value="Nigdy ich nie ma kiedy potrzebuje">Nigdy ich nie ma kiedy potrzebuje</option>
-                    <option value="Są dostępni ale nie zwracam się do nich wole radzić sobie sam/sama">Są dostępni ale nie zwracam się do nich wole radzić sobie sam/sama</option>
-                </select><br>
-
-                <label for="37">37. Jak twoja relacja z rodzicami wpływa na Twoje samopoczucie?   </label><br>
-                <select name="37" id="options">
-                    <option value="Mam dobre relacje z rodzicami dlatego czuje się przy nich dobrze">Mam dobre relacje z rodzicami dlatego czuje się przy nich dobrze </option>
-                    <option value="Mam średnie relacje z rodzicami dlatego moje samopoczucie względem ich jest neutralne">Mam średnie relacje z rodzicami dlatego moje samopoczucie względem ich jest neutralne</option>
-                    <option value="Mam słabe relacje z rodzicami i jest mi z tego powodu przykro">Mam słabe relacje z rodzicami i jest mi z tego powodu przykro</option>
-                    <option value="Mam złe relacje z rodzicami ale nie przejmuje się">Mam złe relacje z rodzicami ale nie przejmuje się </option>
-                    <option value="Inne">Inne</option>
-                </select><br>
-                <label for="37+">Inne </label>
-                <input type="text" name="37+" id="answer"><br>
-
-                <label for="38">38. Czy czujesz ze twój głos jest słyszany i szanowany w twojej rodzinie? </label><br>
-                <select name="38" id="options">
-                    <option value="Tak, rodzice zawsze zwracają uwagę na moja opinie">Tak, rodzice zawsze zwracają uwagę na moja opinie </option>
-                    <option value="Tak, ale nie zawsze">Tak, ale nie zawsze</option>
-                    <option value="Moja opinia zazwyczaj nie jest brana pod uwagę">Moja opinia zazwyczaj nie jest brana pod uwagę</option>
-                    <option value="Nie, moi rodzice nie liczą się z moją opinią ">Nie, moi rodzice nie liczą się z moją opinią </option>
-                </select><br>
-
-                <label for="39">39. Czy masz poczucie, że Twoi rodzice są dla Ciebie wsparciem emocjonalnym?</label><br>
-                <select name="39" id="options">
-                    <option value="Rodzice dają mi dużo wsparcia">Rodzice dają mi dużo wsparcia</option>
-                    <option value="Rodzice średnio mnie wspierają">Rodzice średnio mnie wspierają </option>
-                    <option value="Rodzice nie wspierają mnie">Rodzice nie wspierają mnie</option>
-                </select><br>
-
-                <label for="40">40. Czy czujesz, że masz wystarczającą swobodę w wyrażaniu siebie i swojej tożsamości wobec rodziców?</label><br>
-                <select name="40" id="options">
-                    <option value="TAK, rodzice akceptują mnie taką/takim jaka/jaki jestem">TAK, rodzice akceptują mnie taką/takim jaka/jaki jestem</option>
-                    <option value="NIE, rodzice mnie nie akceptują">NIE, rodzice mnie nie akceptują</option>
-                    <option value="Nie interesuje ich to">Nie interesuje ich to</option>
-                </select><br>
-
-                <label for="41">41. Czy lubisz przebywać ze swoimi rodzicami ?</label><br>
-                <select name="41" id="options">
-                    <option value="Tak, bardzo lubię spędzać czas ze swoimi rodzicami">Tak, bardzo lubię spędzać czas ze swoimi rodzicami</option>
-                    <option value="Nie przepadam za spędzaniem czasu z rodzicami, robię to tylko kiedy musze">Nie przepadam za spędzaniem czasu z rodzicami, robię to tylko kiedy musze</option>
-                    <option value="Nie spędzam z nimi czasu">Nie spędzam z nimi czasu</option>
-
-                </select><br>
-
-                <label for="42">42. Czy twoi rodzice mają dla ciebie czas?</label><br>
-                <select name="42" id="options">
-                    <option value="Tak, rodzice zawsze mają dla mnie czas">Tak, rodzice zawsze mają dla mnie czas</option>
-                    <option value="Zwykle mają dla mnie czas, ale nie zawsze ">Zwykle mają dla mnie czas, ale nie zawsze </option>
-                    <option value="Starają się ale są za bardzo zapracowani">Starają się ale są za bardzo zapracowani</option>
-                    <option value="Nie rodzice nie maja dla mnie czasu">Nie rodzice nie maja dla mnie czasu </option>
-                </select><br>
-
-                <label for="43">43. Czy masz jakieś trudności w relacji z rodzicami? Jeśli tak jakie? (np. nie mogę się z nimi dogadać) </label><br>
-                <input type="text" name="43" id="answer"><br>
-
-                <label for="44">44. Jak opiszesz swoją relacje z rodzicami? (np. ja mam swoje zycie oni swoje…)</label><br>
-                <input type="text" name="44" id="answer"><br>
-                
-                <br>
-                <button type="submit" id="btn">Submit</button>
-            </form>
+          <br />
+          <span class="btn" onclick="next()">Następne</span>
         </div>
+
+        <div class="oneOption" id="Pyt2">
+          <h3>Pytanie 2</h3>
+          <p class="fill">Jaka atmosfera panuje w twoim domu?</p>
+          <input type="radio" name="2" value="Zdystansowana " />
+          <label class="radioContainer" for="2">Zdystansowana </label><br />
+          <input type="radio" name="2" value="Nadmiar obowiązków" />
+          <label class="radioContainer" for="2">Nadmiar obowiązków</label><br />
+          <input type="radio" name="2" value="Unikamy się" />
+          <label class="radioContainer" for="2">Unikamy się</label><br />
+          <input type="radio" name="2" value="Swobodna" />
+          <label class="radioContainer" for="2">Swobodna</label><br />
+          <input type="radio" name="2" value="Czujemy się kochani " />
+          <label class="radioContainer" for="2">Czujemy się kochani </label>
+          <br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt3">
+          <h3>Pytanie 3</h3>
+          <p class="fill">W domu czuje się</p>
+          <input type="radio" name="3" value="Niepotrzebny" />
+          <label class="radioContainer" for="3">Niepotrzebny</label><br />
+          <input type="radio" name="3" value="Swobodnie" />
+          <label class="radioContainer" for="3">Swobodnie</label><br />
+          <input type="radio" name="3" value="Przytłoczony obowiązkami" />
+          <label class="radioContainer" for="3">Przytłoczony obowiązkami</label
+          ><br />
+          <input type="radio" name="3" value="Kochany" />
+          <label class="radioContainer" for="3">Kochany</label><br />
+          <br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt4">
+          <h3>Pytanie 4</h3>
+          <p class="fill">Moi rodzice:</p>
+          <input
+            type="radio"
+            name="4"
+            value="Akceptują moje wybory oraz to jaka/jaki jestem, mam w nich oparcie, czuję że mnie rozumieją "
+          />
+          <label class="radioContainer" for="4"
+            >Akceptują moje wybory oraz to jaka/jaki jestem, mam w nich oparcie,
+            czuję że mnie rozumieją </label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Dają mi dużo swobody, mają do mnie duże zaufanie, pozwalają mi samodzielnie decydować "
+          />
+          <label class="radioContainer" for="4"
+            >Dają mi dużo swobody, mają do mnie duże zaufanie, pozwalają mi
+            samodzielnie decydować </label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Uznają mnie za równą/równego w rodzinie, pozwalają mi brać odpowiedzialność za własne czyny, wolą wytłumaczyć/porozmawiać zamiast nakazywać/wymuszać"
+          />
+          <label class="radioContainer" for="4"
+            >Uznają mnie za równą/równego w rodzinie, pozwalają mi brać
+            odpowiedzialność za własne czyny, wolą wytłumaczyć/porozmawiać
+            zamiast nakazywać/wymuszać</label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Angażują mnie w życie rodzinne, mają ze mną dobry kontakt, cieszą się z każdej chwili spędzonej ze mną"
+          />
+          <label class="radioContainer" for="4"
+            >Angażują mnie w życie rodzinne, mają ze mną dobry kontakt, cieszą
+            się z każdej chwili spędzonej ze mną</label
+          ><br />
+          <br />
+          <input
+            type="radio"
+            name="4"
+            value="Dystansują się ode mnie, są mną rozczarowani, często mi rozkazują i nie dopuszczają do słowa, nie interesują ich moje potrzeby "
+          />
+          <label class="radioContainer" for="4"
+            >Dystansują się ode mnie, są mną rozczarowani, często mi rozkazują i
+            nie dopuszczają do słowa, nie interesują ich moje potrzeby </label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Ciągle mnie oceniają, nakładają na mnie zbyt dużą ilość obowiązków, chcą żebym była idealna/idealny, rządzą mną "
+          />
+          <label class="radioContainer" for="4"
+            >Ciągle mnie oceniają, nakładają na mnie zbyt dużą ilość obowiązków,
+            chcą żebym była idealna/idealny, rządzą mną </label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Unikają kontaktu ze mną, nie rozmawiają, są wobec mnie obojętni, nie angażują się w moje sprawy "
+          />
+          <label class="radioContainer" for="4"
+            >Unikają kontaktu ze mną, nie rozmawiają, są wobec mnie obojętni,
+            nie angażują się w moje sprawy </label
+          ><br />
+          <input
+            type="radio"
+            name="4"
+            value="Są za bardzo nadopiekuńczy, chcą mnie cały czas wyręczać, czuję się przesadnie chroniona, nie pozwalają mi na wiele rzeczy"
+          />
+          <label class="radioContainer" for="4"
+            >Są za bardzo nadopiekuńczy, chcą mnie cały czas wyręczać, czuję się
+            przesadnie chroniona, nie pozwalają mi na wiele rzeczy</label
+          ><br />
+
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt5">
+          <h3>Pytanie 5</h3>
+          <p class="fill">Czy rodzice narzucają ci jaki/jaka masz być?</p>
+          <input type="radio" name="5" value="Tak " />
+          <label class="radioContainer" for="5">Tak </label><br />
+          <input type="radio" name="5" value="Nie" />
+          <label class="radioContainer" for="5">Nie</label><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt6">
+          <h3>Pytanie 6</h3>
+          <p class="fill">Czy twoi rodzice szanują twoją prywatność ?</p>
+          <input type="radio" name="6" value="Tak " />
+          <label class="radioContainer" for="6">Tak </label><br />
+          <input type="radio" name="6" value="Nie" />
+          <label class="radioContainer" for="6">Nie</label><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt7">
+          <h3>Pytanie 7</h3>
+          <p class="fill">
+            Czy masz wrażenie, że Twoi rodzice zawsze stoją po Twojej stronie,
+            nawet jeśli się z Tobą nie zgadzają?
+          </p>
+          <input type="radio" name="7" value="Tak " />
+          <label class="radioContainer" for="7">Tak </label><br />
+          <input type="radio" name="7" value="Nie" />
+          <label class="radioContainer" for="7">Nie</label><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt8">
+          <h3>Pytanie 8</h3>
+          <p class="fill">
+            Czy wykonujesz jakieś aktywności ze swoimi rodzicami?
+          </p>
+          <input type="radio" name="8" value="Tak " />
+          <label class="radioContainer" for="8">Tak, jakie: </label><br />
+          <input type="text" name="8+" /><br />
+          <input type="radio" name="8" value="Nie" />
+          <label class="radioContainer" for="8">Nie</label><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt9">
+          <h3>Pytanie 9</h3>
+          <p class="fill">
+            Jak często masz okazje porozmawiać ze swoimi rodzicami o swoim
+            życiu? Rozmawiamy:
+          </p>
+          <input type="radio" name="9" value="Codziennie" />
+          <label class="radioContainer" for="9">Codziennie </label><br />
+          <input type="radio" name="9" value="Często " />
+          <label class="radioContainer" for="9">Często </label><br />
+          <input type="radio" name="9" value="Czasami" />
+          <label class="radioContainer" for="9">Czasami</label><br />
+          <input
+            type="radio"
+            name="9"
+            value="Jak zapytają to odpowiem i tyle "
+          />
+          <label class="radioContainer" for="9"
+            >Jak zapytają to odpowiem i tyle </label
+          ><br />
+          <input type="radio" name="9" value="Rzadko " />
+          <label class="radioContainer" for="9">Rzadko </label><br />
+          <input type="radio" name="9" value="Prawie nigdy " />
+          <label class="radioContainer" for="9">Prawie nigdy</label><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt10">
+          <h3>Pytanie 10</h3>
+          <p class="fill">
+            Czy czujesz że możesz zawsze przyjść powiedzieć rodzicom o swoich
+            problemach?
+          </p>
+          <input
+            type="radio"
+            name="10"
+            value="Tak, zawsze mogę przyjść powiedzieć "
+          />
+          <label class="radioContainer" for="10"
+            >Tak, zawsze mogę przyjść powiedzieć </label
+          ><br />
+          <input type="radio" name="10" value="Raczej zawsze  " />
+          <label class="radioContainer" for="10">Raczej zawsze </label><br />
+          <input type="radio" name="10" value="Czasami, zależy od problemu " />
+          <label class="radioContainer" for="10"
+            >Czasami, zależy od problemu </label
+          ><br />
+          <input
+            type="radio"
+            name="10"
+            value="Mogę ale nie chodzę z problemami do rodziców "
+          />
+          <label class="radioContainer" for="10"
+            >Mogę ale nie chodzę z problemami do rodziców</label
+          ><br />
+          <input
+            type="radio"
+            name="10"
+            value="Rodzice nie chcą słyszeć o moich problemach, mają swoje "
+          />
+          <label class="radioContainer" for="10"
+            >Rodzice nie chcą słyszeć o moich problemach, mają swoje </label
+          ><br />
+          <input
+            type="radio"
+            name="10"
+            value="Rodzice po prostu nie interesują się moimi problemami  "
+          />
+          <label class="radioContainer" for="10"
+            >Rodzice po prostu nie interesują się moimi problemami </label
+          ><br />
+          <input type="radio" name="10" value="Inne: " />
+          <label class="radioContainer" for="10">Inne:</label><br />
+          <input type="text" name="10+" /><br />
+          <span class="btn" onclick="next()">Następne</span>
+        </div>
+
+        <div class="oneOption" id="Pyt11">
+          <button type="submit" class="btn" onclick="next()">Prześlij</button>
+        </div>
+        <!--<button type="submit" class="btn" onclick="next()">Prześlij</button>-->
+      </form>
     </div>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyQ03umOfJ0Ve-FrO1Uxc4iOhsLe2XzUXP7ebrnupZhEvnslVrx24M9TtAK_6mNFZ8U/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("Msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQ03umOfJ0Ve-FrO1Uxc4iOhsLe2XzUXP7ebrnupZhEvnslVrx24M9TtAK_6mNFZ8U/exec'
-         const form = document.forms['submit-to-google-sheet']
-         const msg = document.getElementById("Msg")
-    
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-         })
+      var tmp = 0;
+
+      function next() {
+        if (tmp == 0) {
+          document.getElementById("Pyt0").style.display = "none";
+          document.getElementById("Pyt1").style.display = "inline";
+        }
+        if (tmp == 1) {
+          document.getElementById("Pyt1").style.display = "none";
+          document.getElementById("Pyt2").style.display = "inline";
+        }
+        if (tmp == 2) {
+          document.getElementById("Pyt2").style.display = "none";
+          document.getElementById("Pyt3").style.display = "inline";
+        }
+        if (tmp == 3) {
+          document.getElementById("Pyt3").style.display = "none";
+          document.getElementById("Pyt4").style.display = "inline";
+        }
+        if (tmp == 4) {
+          document.getElementById("Pyt4").style.display = "none";
+          document.getElementById("Pyt5").style.display = "inline";
+        }
+        if (tmp == 5) {
+          document.getElementById("Pyt5").style.display = "none";
+          document.getElementById("Pyt6").style.display = "inline";
+        }
+        if (tmp == 6) {
+          document.getElementById("Pyt6").style.display = "none";
+          document.getElementById("Pyt7").style.display = "inline";
+        }
+        if (tmp == 7) {
+          document.getElementById("Pyt7").style.display = "none";
+          document.getElementById("Pyt8").style.display = "inline";
+        }
+        if (tmp == 8) {
+          document.getElementById("Pyt8").style.display = "none";
+          document.getElementById("Pyt9").style.display = "inline";
+        }
+        if (tmp == 9) {
+          document.getElementById("Pyt9").style.display = "none";
+          document.getElementById("Pyt10").style.display = "inline";
+        }
+        if (tmp == 10) {
+          document.getElementById("Pyt10").style.display = "none";
+          document.getElementById("Pyt11").style.display = "inline";
+        }
+        if (tmp == 11) {
+          document.getElementById("Pyt11").style.display = "none";
+          document.getElementById("Pyt12").style.display = "inline";
+        }
+        tmp++;
+      }
     </script>
-</body>
+  </body>
 </html>
