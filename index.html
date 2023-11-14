@@ -1,375 +1,239 @@
-<!DOCTYPE html>
-
-<!--SHEET WITH ALL THE DATA COLECTED
-    https://docs.google.com/spreadsheets/d/1r5kUOv2kVaxmfRVFl07kW3VN7Tped5yScVBvnZmy-kc/edit#gid=0
+<!--EXCEL SHEET
+https://docs.google.com/spreadsheets/d/1feQUwq85pHBDLiRZIYULiq6uvHOPDcHVaEvvG6zDqvw/edit#gid=0
 -->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ankieta - ___</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>Ankieta</h1>
-        <p>
-          Jest to ankieta badająca relacje z rodzicami. Bardzo proszę o dokładne
-          czytanie pytań oraz udzielenie szczerych odpowiedzi na każde pytanie
-          poprzez zaznaczenie odpowiedzi bądź wpisanie własnej. Ankieta jest
-          ANONIMOWA, uzyskane informacje zostaną wykorzystane tylko i wyłącznie
-          do celów naukowych (praca licencjacka). Dziękuję :)
-        </p>
-      </div>
-
-      <form name="submit-to-google-sheet">
-        <div class="oneOption" id="Pyt0">
-          <h3 class="fill">Ile masz lat?</h3>
-          <input type="radio" name="Wiek" value="15" />
-          <label class="radioContainer" for="Wiek">15</label><br />
-          <input type="radio" name="Wiek" value="16" />
-          <label class="radioContainer" for="Wiek">16</label><br />
-          <input type="radio" name="Wiek" value="17" />
-          <label class="radioContainer" for="Wiek">17</label><br />
-          <input type="radio" name="Wiek" value="18" />
-          <label class="radioContainer" for="Wiek">18</label><br />
-          <input type="radio" name="Wiek" value="19" />
-          <label class="radioContainer" for="Wiek">19</label>
-          <br />
-          <span class="btn" onclick="next()">Następne</span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Hubert</title>
+    <script src="https://kit.fontawesome.com/cb012eb15d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            
+                <nav class="header">
+                    <img src="images/logo.png" class="logo" alt="MY LOGO">
+                    <ul id="sidemenu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <!--<li><a href="#services">Services</a></li>-->
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" id="barmenu" onclick="openmenu()"></i>
+                </nav>
+          
+            <div class="header-text">
+                <p>Programmer/Electronic</p>
+                <h1>Hi, Im <span>Hubert</span><br> Malik from Poland</h1>
+            </div>
         </div>
+    </div> 
+<!----------------------About-------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Background.jpg" alt="My Photo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, my name is Hubert, I'm 23 years old and I'm from Kraow Poland. I'm currently studying Electronics and Telecomunication at AGH University of Science and Technology. For some time now 
+                        I`ve been interested in Web Designing so here I am making this Portfolio. Also my main interests are gaming, programming (lately in C++, and Unity) and 3D modeling in Blender.
+                        Currenly I'm trying to find some part time job/internship, in the field of Electronics or Programming. 
+                    </p>
 
-        <div class="oneOption" id="Pyt1">
-          <h3>Pytanie 1</h3>
-          <p class="fill">Czy masz oboje rodziców?</p>
-          <input type="radio" name="1" value="Tak" />
-          <label class="radioContainer" for="1">Tak</label><br />
-          <input type="radio" name="1" value="Nie" />
-          <label class="radioContainer" for="1">Nie</label><br />
-
-          <br />
-          <span class="btn" onclick="next()">Następne</span>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>C++20, Python, C</li>
+                            <li><span>Web Design</span><br>HTML, CSS , JAVASCRIPT</li>
+                            <li><span>Knowledge of Programs</span><br> Visual Studio, Visual Studio Code, PyCharm,
+                                Matlab, PSPICE, Cadance, KEIL μVISION, LabView, Cisco Packet
+                                Tracer, PuTTY, GitHub</li>
+                            <li><Span>Knowledge of Operationg systems</Span><br>Windows, Linux</li>
+                            <li><span>Languages</span><br>Polish - native <br>English - intermediate</li>
+                            <li><Span>Driving License</Span><br>Kategory B</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>07.2021-09.2021 And 07.2022-09.2022</span><br>Fashion Trends Group / Warehouseman<br>Skawina</li>
+                            <li><span>07.2019 - 08. 2019 </span><br>KRK Systemy Kablowe / Apprentice<br>Liszki</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10.2020 - PRESENT</span><br>AGH University of Science and Technology, Krakow<br><br> Filed of study: Electronics and Telecomunications <br>
+                                Type of studies: Full-time studies</li>
+                            <li><span>09.2016 - 04.2020</span><br>Technical school - Technikum Energetyczno Elektroniczne im.
+                                Tadeusza Kosciuszki nr 9 w Krakowie, Krakow <br> <br>Filed of study: Electronics <br>
+                                Acquired title: Electronics Technician</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="oneOption" id="Pyt2">
-          <h3>Pytanie 2</h3>
-          <p class="fill">Jaka atmosfera panuje w twoim domu?</p>
-          <input type="radio" name="2" value="Zdystansowana " />
-          <label class="radioContainer" for="2">Zdystansowana </label><br />
-          <input type="radio" name="2" value="Nadmiar obowiązków" />
-          <label class="radioContainer" for="2">Nadmiar obowiązków</label><br />
-          <input type="radio" name="2" value="Unikamy się" />
-          <label class="radioContainer" for="2">Unikamy się</label><br />
-          <input type="radio" name="2" value="Swobodna" />
-          <label class="radioContainer" for="2">Swobodna</label><br />
-          <input type="radio" name="2" value="Czujemy się kochani " />
-          <label class="radioContainer" for="2">Czujemy się kochani </label>
-          <br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt3">
-          <h3>Pytanie 3</h3>
-          <p class="fill">W domu czuje się</p>
-          <input type="radio" name="3" value="Niepotrzebny" />
-          <label class="radioContainer" for="3">Niepotrzebny</label><br />
-          <input type="radio" name="3" value="Swobodnie" />
-          <label class="radioContainer" for="3">Swobodnie</label><br />
-          <input type="radio" name="3" value="Przytłoczony obowiązkami" />
-          <label class="radioContainer" for="3">Przytłoczony obowiązkami</label
-          ><br />
-          <input type="radio" name="3" value="Kochany" />
-          <label class="radioContainer" for="3">Kochany</label><br />
-          <br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt4">
-          <h3>Pytanie 4</h3>
-          <p class="fill">Moi rodzice:</p>
-          <input
-            type="radio"
-            name="4"
-            value="Akceptują moje wybory oraz to jaka/jaki jestem, mam w nich oparcie, czuję że mnie rozumieją "
-          />
-          <label class="radioContainer" for="4"
-            >Akceptują moje wybory oraz to jaka/jaki jestem, mam w nich oparcie,
-            czuję że mnie rozumieją </label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Dają mi dużo swobody, mają do mnie duże zaufanie, pozwalają mi samodzielnie decydować "
-          />
-          <label class="radioContainer" for="4"
-            >Dają mi dużo swobody, mają do mnie duże zaufanie, pozwalają mi
-            samodzielnie decydować </label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Uznają mnie za równą/równego w rodzinie, pozwalają mi brać odpowiedzialność za własne czyny, wolą wytłumaczyć/porozmawiać zamiast nakazywać/wymuszać"
-          />
-          <label class="radioContainer" for="4"
-            >Uznają mnie za równą/równego w rodzinie, pozwalają mi brać
-            odpowiedzialność za własne czyny, wolą wytłumaczyć/porozmawiać
-            zamiast nakazywać/wymuszać</label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Angażują mnie w życie rodzinne, mają ze mną dobry kontakt, cieszą się z każdej chwili spędzonej ze mną"
-          />
-          <label class="radioContainer" for="4"
-            >Angażują mnie w życie rodzinne, mają ze mną dobry kontakt, cieszą
-            się z każdej chwili spędzonej ze mną</label
-          ><br />
-          <br />
-          <input
-            type="radio"
-            name="4"
-            value="Dystansują się ode mnie, są mną rozczarowani, często mi rozkazują i nie dopuszczają do słowa, nie interesują ich moje potrzeby "
-          />
-          <label class="radioContainer" for="4"
-            >Dystansują się ode mnie, są mną rozczarowani, często mi rozkazują i
-            nie dopuszczają do słowa, nie interesują ich moje potrzeby </label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Ciągle mnie oceniają, nakładają na mnie zbyt dużą ilość obowiązków, chcą żebym była idealna/idealny, rządzą mną "
-          />
-          <label class="radioContainer" for="4"
-            >Ciągle mnie oceniają, nakładają na mnie zbyt dużą ilość obowiązków,
-            chcą żebym była idealna/idealny, rządzą mną </label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Unikają kontaktu ze mną, nie rozmawiają, są wobec mnie obojętni, nie angażują się w moje sprawy "
-          />
-          <label class="radioContainer" for="4"
-            >Unikają kontaktu ze mną, nie rozmawiają, są wobec mnie obojętni,
-            nie angażują się w moje sprawy </label
-          ><br />
-          <input
-            type="radio"
-            name="4"
-            value="Są za bardzo nadopiekuńczy, chcą mnie cały czas wyręczać, czuję się przesadnie chroniona, nie pozwalają mi na wiele rzeczy"
-          />
-          <label class="radioContainer" for="4"
-            >Są za bardzo nadopiekuńczy, chcą mnie cały czas wyręczać, czuję się
-            przesadnie chroniona, nie pozwalają mi na wiele rzeczy</label
-          ><br />
-
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt5">
-          <h3>Pytanie 5</h3>
-          <p class="fill">Czy rodzice narzucają ci jaki/jaka masz być?</p>
-          <input type="radio" name="5" value="Tak " />
-          <label class="radioContainer" for="5">Tak </label><br />
-          <input type="radio" name="5" value="Nie" />
-          <label class="radioContainer" for="5">Nie</label><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt6">
-          <h3>Pytanie 6</h3>
-          <p class="fill">Czy twoi rodzice szanują twoją prywatność ?</p>
-          <input type="radio" name="6" value="Tak " />
-          <label class="radioContainer" for="6">Tak </label><br />
-          <input type="radio" name="6" value="Nie" />
-          <label class="radioContainer" for="6">Nie</label><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt7">
-          <h3>Pytanie 7</h3>
-          <p class="fill">
-            Czy masz wrażenie, że Twoi rodzice zawsze stoją po Twojej stronie,
-            nawet jeśli się z Tobą nie zgadzają?
-          </p>
-          <input type="radio" name="7" value="Tak " />
-          <label class="radioContainer" for="7">Tak </label><br />
-          <input type="radio" name="7" value="Nie" />
-          <label class="radioContainer" for="7">Nie</label><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt8">
-          <h3>Pytanie 8</h3>
-          <p class="fill">
-            Czy wykonujesz jakieś aktywności ze swoimi rodzicami?
-          </p>
-          <input type="radio" name="8" value="Tak " />
-          <label class="radioContainer" for="8">Tak, jakie: </label><br />
-          <input type="text" name="8+" /><br />
-          <input type="radio" name="8" value="Nie" />
-          <label class="radioContainer" for="8">Nie</label><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt9">
-          <h3>Pytanie 9</h3>
-          <p class="fill">
-            Jak często masz okazje porozmawiać ze swoimi rodzicami o swoim
-            życiu? Rozmawiamy:
-          </p>
-          <input type="radio" name="9" value="Codziennie" />
-          <label class="radioContainer" for="9">Codziennie </label><br />
-          <input type="radio" name="9" value="Często " />
-          <label class="radioContainer" for="9">Często </label><br />
-          <input type="radio" name="9" value="Czasami" />
-          <label class="radioContainer" for="9">Czasami</label><br />
-          <input
-            type="radio"
-            name="9"
-            value="Jak zapytają to odpowiem i tyle "
-          />
-          <label class="radioContainer" for="9"
-            >Jak zapytają to odpowiem i tyle </label
-          ><br />
-          <input type="radio" name="9" value="Rzadko " />
-          <label class="radioContainer" for="9">Rzadko </label><br />
-          <input type="radio" name="9" value="Prawie nigdy " />
-          <label class="radioContainer" for="9">Prawie nigdy</label><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt10">
-          <h3>Pytanie 10</h3>
-          <p class="fill">
-            Czy czujesz że możesz zawsze przyjść powiedzieć rodzicom o swoich
-            problemach?
-          </p>
-          <input
-            type="radio"
-            name="10"
-            value="Tak, zawsze mogę przyjść powiedzieć "
-          />
-          <label class="radioContainer" for="10"
-            >Tak, zawsze mogę przyjść powiedzieć </label
-          ><br />
-          <input type="radio" name="10" value="Raczej zawsze  " />
-          <label class="radioContainer" for="10">Raczej zawsze </label><br />
-          <input type="radio" name="10" value="Czasami, zależy od problemu " />
-          <label class="radioContainer" for="10"
-            >Czasami, zależy od problemu </label
-          ><br />
-          <input
-            type="radio"
-            name="10"
-            value="Mogę ale nie chodzę z problemami do rodziców "
-          />
-          <label class="radioContainer" for="10"
-            >Mogę ale nie chodzę z problemami do rodziców</label
-          ><br />
-          <input
-            type="radio"
-            name="10"
-            value="Rodzice nie chcą słyszeć o moich problemach, mają swoje "
-          />
-          <label class="radioContainer" for="10"
-            >Rodzice nie chcą słyszeć o moich problemach, mają swoje </label
-          ><br />
-          <input
-            type="radio"
-            name="10"
-            value="Rodzice po prostu nie interesują się moimi problemami  "
-          />
-          <label class="radioContainer" for="10"
-            >Rodzice po prostu nie interesują się moimi problemami </label
-          ><br />
-          <input type="radio" name="10" value="Inne: " />
-          <label class="radioContainer" for="10">Inne:</label><br />
-          <input type="text" name="10+" /><br />
-          <span class="btn" onclick="next()">Następne</span>
-        </div>
-
-        <div class="oneOption" id="Pyt11">
-          <button type="submit" class="btn" onclick="next()">Prześlij</button>
-        </div>
-        <!--<button type="submit" class="btn" onclick="next()">Prześlij</button>-->
-      </form>
     </div>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyQ03umOfJ0Ve-FrO1Uxc4iOhsLe2XzUXP7ebrnupZhEvnslVrx24M9TtAK_6mNFZ8U/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("Msg");
+<!------------------------Services------------------------------------------->
+<!--    <div id="services">
+        <div class="container">
+            <h1 class="sub-title service-header" >My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I can help u make website like this.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Design</h2>
+                    <p>I can help u make basic game in C++.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cube"></i>
+                    <h2>Blender Design</h2>
+                    <p>I can make some cool 3D art using blender.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+--> 
+<!-------------------Portfolio------------------------------------->
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Dragon.jpg" alt="Photo of Work 1">
+                    <div class="layer">
+                        <h3>Dungeon Game</h3>
+                        <p>Simple C++ game, where you move a player and colect rewards while doding enemies. </p>
+                        <a href="https://github.com/hmalikagh/DungeonGame---repo" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Website.jpg" alt="Photo of Work 2">
+                    <div class="layer">
+                        <h3>Portfolio Website</h3>
+                        <p> This is exactly my project, my first ever Portfolio made using HTML and CSS.</p>
+                        <a href="https://github.com/hmalikagh/Web-Design/tree/main/Portfolio" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Room.png" alt="Photo of Work 2">
+                    <div class="layer">
+                        <h3>Blender Models</h3>
+                        <p> Simple moedels created in Blender.</p>
+                        <a href="https://github.com/hmalikagh/Blender" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/hmalikagh" target="_blank" class="btn">See more</a>
+        </div>
+    </div>
+<!----------------------------Contact------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me </h1>
+                    <p><i class="fa-solid fa-envelope"></i> hubert.malik00@interia.pl</p>
+                    <p><i class="fa-solid fa-phone"></i> 534 591 499</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/hubert.malik.779" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/hubi_17/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/hmalikagh/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/CV - Hubert Malik.pdf" download class="btn btn2">Downlload CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="Msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © Hubert. Made with help of Easy Tutorials <a href="https://www.youtube.com/@EasyTutorialsVideo" target="_blank"><i class="fa-solid fa-link"></i></a></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
     </script>
 
     <script>
-      var tmp = 0;
+        
+        var sidemenu = document.getElementById("sidemenu");
+        var barmenu = document.getElementById("barmenu");
+        
 
-      function next() {
-        if (tmp == 0) {
-          document.getElementById("Pyt0").style.display = "none";
-          document.getElementById("Pyt1").style.display = "inline";
+        function openmenu(){
+            sidemenu.style.display = "block"
+            barmenu.style.display = "none"
+
         }
-        if (tmp == 1) {
-          document.getElementById("Pyt1").style.display = "none";
-          document.getElementById("Pyt2").style.display = "inline";
+
+        function closemenu(){
+            sidemenu.style.display = "none"
+            barmenu.style.display = "block"
+            
         }
-        if (tmp == 2) {
-          document.getElementById("Pyt2").style.display = "none";
-          document.getElementById("Pyt3").style.display = "inline";
-        }
-        if (tmp == 3) {
-          document.getElementById("Pyt3").style.display = "none";
-          document.getElementById("Pyt4").style.display = "inline";
-        }
-        if (tmp == 4) {
-          document.getElementById("Pyt4").style.display = "none";
-          document.getElementById("Pyt5").style.display = "inline";
-        }
-        if (tmp == 5) {
-          document.getElementById("Pyt5").style.display = "none";
-          document.getElementById("Pyt6").style.display = "inline";
-        }
-        if (tmp == 6) {
-          document.getElementById("Pyt6").style.display = "none";
-          document.getElementById("Pyt7").style.display = "inline";
-        }
-        if (tmp == 7) {
-          document.getElementById("Pyt7").style.display = "none";
-          document.getElementById("Pyt8").style.display = "inline";
-        }
-        if (tmp == 8) {
-          document.getElementById("Pyt8").style.display = "none";
-          document.getElementById("Pyt9").style.display = "inline";
-        }
-        if (tmp == 9) {
-          document.getElementById("Pyt9").style.display = "none";
-          document.getElementById("Pyt10").style.display = "inline";
-        }
-        if (tmp == 10) {
-          document.getElementById("Pyt10").style.display = "none";
-          document.getElementById("Pyt11").style.display = "inline";
-        }
-        if (tmp == 11) {
-          document.getElementById("Pyt11").style.display = "none";
-          document.getElementById("Pyt12").style.display = "inline";
-        }
-        tmp++;
-      }
+
     </script>
-  </body>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNR_Utdq50-7yF0YyIMLvYhjjQPvu70sBTIhgDQNBpKgRZzf8ykM9n9W7LJ2Sdz1ol/exec'
+     const form = document.forms['submit-to-google-sheet']
+     const msg = document.getElementById("Msg")
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+     })
+    </script>
+</body>
 </html>
